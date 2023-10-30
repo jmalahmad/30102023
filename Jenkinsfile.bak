@@ -8,7 +8,11 @@ stage('Java Version') {
 steps {               sh 'java -version'            }        
 } 
 stage('compile project') {            
-steps {               sh 'mvn clean install'            }        
+steps {               sh 'mvn clean package'            }        
+}    
+}
+stage('test project') {            
+steps {               sh 'mvn test'            }        
 }    
 }
 }
